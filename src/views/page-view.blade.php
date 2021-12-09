@@ -1,13 +1,6 @@
-<!doctype html>
-<html>
+@extends('pageManagemnet-package::layout.app')
 
-<head>
-    @extends('includes.head')
-</head>
-
-<body>
-<div class="container">
-    <div class="main">
+@section('content')
         <a href="{{ route('page.index')}}" class="btn btn-info">Back</a>
         <center><h2>Page Detail</h2></center>
     </div>
@@ -41,7 +34,5 @@
         @endforeach
     </table>
 </div>
-</body>
-
-</html>
+@stop
 

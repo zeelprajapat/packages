@@ -1,19 +1,6 @@
-<!doctype html>
-<html>
+@extends('pageManagemnet-package::layout.app')
 
-<head>
-    @extends('includes.head')
-    <!-- <script type="text/javascript" src="{{ asset('public\communication-craft\pageManagemnet-package\page-add-url.js') }}"></script>   -->
-    <!-- <script type="text/javascript" src='page-add-url.js'></script>   -->
-<!--  
-    <script type="text/javascript" src="{{ asset('/js/page-add-url.js') }}"></script>   -->
-   
-</head>
-
-<body>
-
-<div class="container">
-    <div class="main">
+@section('content')
         <a href="{{ route('page.index')}}" class="btn btn-info">Back</a>
         <h2>Add Page</h2>
     </div>
@@ -96,8 +83,4 @@
        $('.ckeditor').ckeditor();
     });
 </script> 
-</body>
-<!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"/> -->
-
-
-</html>
+@stop

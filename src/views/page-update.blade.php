@@ -1,16 +1,6 @@
-<!doctype html>
-<html>
+@extends('pageManagemnet-package::layout.app')
 
-<head>
-    @extends('includes.head')
-    
-</head>
-
-<body>
-
-<!-- @include('flash-message') -->
-<div class="container">
-    <div class="main">
+@section('content')
         <a href="{{ route('page.index')}}" class="btn btn-info">Back</a>
         <h2>Update Page</h2>
     </div>
@@ -95,5 +85,4 @@
        $('.ckeditor').ckeditor();
     });
 </script> 
-</body>
-</html>
+@stop

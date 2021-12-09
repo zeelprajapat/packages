@@ -1,16 +1,8 @@
-<!doctype html>
-<html>
+@extends('pageManagemnet-package::layout.app')
 
-<head>
-    @extends('includes.head')
+@section('content')
 
-</head>
-
-<body>
-    <div class="container">
-        <div id="main">
-
-            @extends('flash-message')
+            @include('pageManagemnet-package::flash-message')
             <div class="main1 clearfix">
                 <a href="{{ route('page.create')}}" class="pull-right btn btn-primary">Add Page</a>
                 <h2>Pages</h2>
@@ -95,6 +87,4 @@
 </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{ asset('/package/js/page-delete.js') }}"></script>
-</body>
-
-</html>
+    @stop
