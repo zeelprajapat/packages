@@ -1,0 +1,22 @@
+{
+    "name": "comminication-craft/pagemanagement",
+    "description": "This package will manage page module",
+    "autoload": {
+        "psr-4": {
+            "ComminicationCraft\\Pagemanagement\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Smith",
+            "email": "john@example.com"
+        }
+    ],
+    "require": { 
+		 "php": ">=5.3.0"
+		},
+ 
+    
+    "type": "package",
+    "license": "mit"
+}
