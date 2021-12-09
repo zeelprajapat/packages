@@ -17,8 +17,11 @@
 		 "laravelcollective/html": "^6.2",
 		 "kyslik/column-sortable": "^6.4"
 		},
- 
-    
+      "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish"
+        ]
+    }, 
     "type": "package",
     "license": "mit"
 }
