@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    @include('includes.head')
+    @extends('includes.head')
     
 </head>
 

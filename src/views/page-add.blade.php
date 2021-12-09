@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    @include('includes.head')
+    @extends('includes.head')
     <!-- <script type="text/javascript" src="{{ asset('public\communication-craft\pageManagemnet-package\page-add-url.js') }}"></script>   -->
     <!-- <script type="text/javascript" src='page-add-url.js'></script>   -->
 <!--  

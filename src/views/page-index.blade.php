@@ -10,7 +10,7 @@
     <div class="container">
         <div id="main">
 
-            @include('flash-message')
+            @extends('flash-message')
             <div class="main1 clearfix">
                 <a href="{{ route('page.create')}}" class="pull-right btn btn-primary">Add Page</a>
                 <h2>Pages</h2>
