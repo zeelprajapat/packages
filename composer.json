@@ -19,7 +19,9 @@
 		},
       "scripts": {
         "post-install-cmd": [
-            "@php artisan vendor:publish"
+            "@php artisan vendor:publish",
+	    "composer require laravelcollective/html",
+	    "composer require kyslik/column-sortable" 
         ]
     }, 
     "type": "package",
