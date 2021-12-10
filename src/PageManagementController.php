@@ -87,7 +87,13 @@ class PageManagementController extends Controller
     public function show($id)
     {
         //
-        $data = Page::where('id', $id)->get();
+        $page = Page::find($id);
+
+        if ($page) {
+            $data = Page::where('id', $id)->get();
+        } else {
+            return redirect('page')->with('error', 'Page bot available.');
+        }
 
         return view('pageManagemnet-package::page-view', compact('data'));
     }
@@ -148,10 +154,9 @@ class PageManagementController extends Controller
         //
 
         $data = Page::find($id);
-        if($data){
+        if ($data) {
             $data->delete();
-        }
-        else{
+        } else {
             return redirect('page')->with('error', 'Page not available.');
         }
         return redirect('page')->with('success', 'Page deleted successfully.');
