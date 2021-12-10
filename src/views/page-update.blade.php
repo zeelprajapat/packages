@@ -25,7 +25,7 @@
                 <td>URI</td>
                 <td>
                     <div class="col-xs-4">
-                        <input type="text" name="uri" value="{{$value->uri}}" id="urlID" class="form-control form-control-lg" placeholder="Enter uri">
+                        <input type="text" name="uri" readonly value="{{$value->uri}}" id="urlID" class="form-control form-control-lg" placeholder="Page uri">
                     </div>
                 </td>
             </tr>
