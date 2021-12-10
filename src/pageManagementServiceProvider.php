@@ -4,6 +4,7 @@
 namespace ComminicationCraft\Pagemanagement;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class pageManagementServiceProvider extends ServiceProvider
 {
@@ -41,6 +42,6 @@ class pageManagementServiceProvider extends ServiceProvider
         //
         //register route file
         include __DIR__.'/routes.php';
-
+        Paginator::useBootstrap();
     }
 }
