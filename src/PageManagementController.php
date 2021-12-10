@@ -92,7 +92,7 @@ class PageManagementController extends Controller
         if ($page) {
             $data = Page::where('id', $id)->get();
         } else {
-            return redirect('page')->with('error', 'Page bot available.');
+            return redirect('page')->with('error', 'Page not available.');
         }
 
         return view('pageManagemnet-package::page-view', compact('data'));
