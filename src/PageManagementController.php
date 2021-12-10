@@ -19,7 +19,7 @@ class PageManagementController extends Controller
         $name = $request->input('name');
         $status = $request->input('status');
 
-        $data = Page::sortable();
+        $data = Page::sortable('name','asc');
         if (isset($name)) {
             $data = $data->where("name", 'like', '%' . $name . '%');
         }
