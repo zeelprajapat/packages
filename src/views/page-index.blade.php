@@ -79,7 +79,6 @@
             @endif
         </tbody>
     </table>
-    <!-- {!! $data->appends(\Request::except('page'))->render() !!} -->
 </div>
 </div>
 </div>
