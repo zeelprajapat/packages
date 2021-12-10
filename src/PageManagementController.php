@@ -153,12 +153,8 @@ class PageManagementController extends Controller
     {
         //
 
-        $data = Page::find($id);
-        if ($data) {
-            $data->delete();
-        } else {
-            return redirect('page')->with('error', 'Page not available.');
-        }
+        Page::find($id)->delete();
+
         return redirect('page')->with('success', 'Page deleted successfully.');
     }
 }
