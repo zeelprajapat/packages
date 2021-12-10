@@ -41,8 +41,6 @@ class pageManagementServiceProvider extends ServiceProvider
         //
         //register route file
         include __DIR__.'/routes.php';
-      
-
 
     }
 }

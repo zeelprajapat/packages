@@ -60,7 +60,7 @@
                                 {{ Form::open(array('route' => array('page.destroy', $value->id), 'method' => 'delete')) }}
                                 <button type="submit" class="btn btn-danger page_delete">Delete</button>
                                 {{ Form::close() }}
-                                <!-- <a href="{{route('page.destroy', ['page' => $value->id])}}" class="btn btn-danger">Delete</a> -->
+                            
                             </div>
                             <div class="pull-right">
                                 <a href="{{ route('page.show', ['page' => $value->id])}}" class="btn btn-info">View</a>

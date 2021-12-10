@@ -6,7 +6,6 @@
     </div>
     @foreach ($data as $value)
 
-
     <form method="post" action="{{ route('page.update', ['page' => $value->id]) }}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <input name="_method" type="hidden" value="PUT">
@@ -62,9 +61,7 @@
                         <span class="text-danger">{{ $errors->first('status') }}</span>
                     </div>
                 </td>
-            </tr>
-           
-       
+            </tr>    
             <tr>
                 <td></td>
                 <td>
@@ -73,7 +70,6 @@
                 </div>
                 </td>
             </tr>
-
         </table>
         @endforeach
     </form>

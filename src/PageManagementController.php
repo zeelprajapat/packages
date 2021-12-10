@@ -1,10 +1,8 @@
 <?php
 
-// namespace App\Http\Controllers;
 namespace ComminicationCraft\Pagemanagement;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use ComminicationCraft\Pagemanagement\Page;
 
@@ -17,11 +15,10 @@ class PageManagementController extends Controller
      */
     public function index(Request $request)
     {
-        //
+
         $name = $request->input('name');
         $status = $request->input('status');
 
-        // $data = Page::orderBy('created_at', 'desc');
         $data = Page::sortable();
         if (isset($name)) {
             $data = $data->where("name", 'like', '%' . $name . '%');
@@ -31,14 +28,14 @@ class PageManagementController extends Controller
         }
 
         $data = $data->paginate(3);
-       // dd($data);
+
         if (isset($status)) {
             $data = $data->withPath('/page?status=' . $status);
         }
         if (isset($name)) {
             $data = $data->withPath('/page?name=' . $name);
         }
-    
+
         return view('pageManagemnet-package::page-index', compact('data'));
     }
 
@@ -49,7 +46,7 @@ class PageManagementController extends Controller
      */
     public function create()
     {
-        //
+
         return view('pageManagemnet-package::page-add');
     }
 
@@ -61,8 +58,6 @@ class PageManagementController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        // dd("hii");
 
         $request->validate([
             'name' => 'required|max:255|unique:pages',
@@ -79,7 +74,7 @@ class PageManagementController extends Controller
             'uri' => $request->input('uri'),
         ];
 
-        $insert = Page::create($data);
+        Page::create($data);
         return redirect('page')->with('success', 'Page added successfully.');
     }
 
@@ -153,8 +148,12 @@ class PageManagementController extends Controller
         //
 
         $data = Page::find($id);
-
-        $data->delete();
+        if($data){
+            $data->delete();
+        }
+        else{
+            return redirect('page')->with('error', 'Page not available.');
+        }
         return redirect('page')->with('success', 'Page deleted successfully.');
     }
 }

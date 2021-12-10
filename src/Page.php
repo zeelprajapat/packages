@@ -1,6 +1,5 @@
 <?php
 
-// namespace App\Models;
 namespace ComminicationCraft\Pagemanagement;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
