@@ -57,10 +57,11 @@
                     <div class="text-right">
                         <div class="clearfix">
                             <div class="col-xs-2 pull-right">
-                                {{ Form::open(array('route' => array('page.destroy', $value->id), 'method' => 'delete')) }}
-                                <button type="submit" class="btn btn-danger page_delete">Delete</button>
-                                {{ Form::close() }}
-                            
+                                <form method="POST" style="margin-bottom: 0px;" action="{{ route('page.destroy', ['page' => $value->id])}}">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger page_delete">Delete</button>
+                                </form>
                             </div>
                             <div class="pull-right">
                                 <a href="{{ route('page.show', ['page' => $value->id])}}" class="btn btn-info">View</a>
